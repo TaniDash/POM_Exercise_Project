@@ -17,6 +17,7 @@ public class DashboardPage {
 	@FindBy(how = How.XPATH, using = "//*[@id=\"page-wrapper\"]/div[2]/div/h2") WebElement DASHBOARD_HEADER_ELEMENT;
 	@FindBy(how = How.XPATH, using = "//*[@id=\"side-menu\"]/li[3]/a/span[1]") WebElement CUSTOMER_MENU_ELEMENT;
 	@FindBy(how = How.XPATH, using = "//*[@id=\"side-menu\"]/li[3]/ul/li[1]/a") WebElement ADD_CUSTOMER_MENU_ELEMENT;
+	@FindBy(how = How.XPATH, using = "//a[@id='summary']") WebElement SUMMARY_SIDE_MENU_ELEMENT;
 	@FindBy(how = How.XPATH, using = "//ul[@id='side-menu']/li[3]/ul/li[2]/a") WebElement LIST_CUSTOMER_MENU_ELEMENT;
 
 	public void verifyDashboardPage() {
@@ -31,10 +32,17 @@ public class DashboardPage {
 		ADD_CUSTOMER_MENU_ELEMENT.click();
 	}
 
-	public void clickListCustomerMenuButton() {
-		LIST_CUSTOMER_MENU_ELEMENT.click();
+	
+	public void verifyContactCustomerPage() {
+		Assert.assertEquals(SUMMARY_SIDE_MENU_ELEMENT.getText(), "Summary", "Wrong page!");
+		System.out.println(SUMMARY_SIDE_MENU_ELEMENT.getText());
 		
 	}
 	
 	
+	public void clickListCustomerMenuButton() {
+		LIST_CUSTOMER_MENU_ELEMENT.click();
+		
+	}
+
 }

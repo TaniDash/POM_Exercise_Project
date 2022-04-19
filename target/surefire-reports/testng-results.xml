@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Command line suite" duration-ms="27054" started-at="2022-03-19T14:10:40Z" finished-at="2022-03-19T14:11:07Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="27054" started-at="2022-03-19T14:10:40Z" finished-at="2022-03-19T14:11:07Z">
+      <class name="test.AddCustomerTest">
+        <test-method status="PASS" signature="validUserShouldBeAbleToCreateCustomer()[pri:2, instance:test.AddCustomerTest@7f63425a]" name="validUserShouldBeAbleToCreateCustomer" duration-ms="11529" started-at="2022-03-19T14:10:55Z" finished-at="2022-03-19T14:11:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validUserShouldBeAbleToCreateCustomer -->
+      </class> <!-- test.AddCustomerTest -->
+      <class name="test.LoginTest">
+        <test-method status="PASS" signature="validUserShouldBeAbleToLogin()[pri:1, instance:test.LoginTest@39ba5a14]" name="validUserShouldBeAbleToLogin" duration-ms="9612" started-at="2022-03-19T14:10:46Z" finished-at="2022-03-19T14:10:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validUserShouldBeAbleToLogin -->
+      </class> <!-- test.LoginTest -->
+      <class name="test.ListCustomerTest">
+        <test-method status="PASS" signature="validUserShouldBeAbleToFindCustomer()[pri:0, instance:test.ListCustomerTest@36d64342]" name="validUserShouldBeAbleToFindCustomer" duration-ms="5881" started-at="2022-03-19T14:10:40Z" finished-at="2022-03-19T14:10:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validUserShouldBeAbleToFindCustomer -->
+      </class> <!-- test.ListCustomerTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>

@@ -4,14 +4,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
 	private WebDriver driver;
 	
 	public LoginPage(WebDriver driver) {
+
 		this.driver = driver;
+		PageFactory.initElements(driver, this);
+		
 	}
-	
+
+
 	//webelement
 	@FindBy(how = How.XPATH, using = "//*[@id=\"username\"]") WebElement USERNAME_ELEMENT;
 	@FindBy(how = How.XPATH, using = "//*[@id=\"password\"]") WebElement PASSWORD_ELEMENT;

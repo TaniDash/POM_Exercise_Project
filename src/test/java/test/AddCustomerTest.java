@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 
 import page.AddCustomerPage;
 import page.DashboardPage;
-import page.ListCustomerPage;
 import page.LoginPage;
 import util.BowserFactory;
 
@@ -30,9 +29,9 @@ WebDriver driver;
 		
 		AddCustomerPage addCustomerPage = PageFactory.initElements(driver, AddCustomerPage.class);
 		addCustomerPage.verifyAddContactPage();
-		addCustomerPage.insertFullName("Selenium October");
+		addCustomerPage.insertFullName("TaniaD");
 		addCustomerPage.selectCompanyDropdown("Techfios");
-		addCustomerPage.insertEmail("abc345@gmail.com");
+		addCustomerPage.insertEmail("abc@gmail.com");
 		addCustomerPage.insertPhoneNum("8596214");
 		addCustomerPage.insertAddress("asdedse dr.");
 		addCustomerPage.insertCity("cdsf");
@@ -44,16 +43,18 @@ WebDriver driver;
 		addCustomerPage.insertConfirmPassword("abc345");
 		addCustomerPage.clickWelcomeEmailButton("true");
 		addCustomerPage.clickSaveButton();
+		//we have to create a profile page and verify the added customer; we can put the assert data into excel as well
+		dashboardPage.verifyContactCustomerPage();
+		dashboardPage.clickListCustomerMenuButton();
+		//verify list customer by deleting the element to test, so that next time there are less options to validate
+		//alert pop up
+		addCustomerPage.verifyAddedCustomer();		
 		
-		ListCustomerPage listCustomer =PageFactory.initElements(driver, ListCustomerPage.class);
-		listCustomer.verifyNewCustomer();
-		listCustomer.verifyListCustomerPage();
-		listCustomer.verifyAddedCustomer();
-		listCustomer.clickSearchIcon();
-	}
 		
+
+	
 		
 	
-
+	}
 
 }
