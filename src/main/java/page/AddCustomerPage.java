@@ -19,6 +19,7 @@ public class AddCustomerPage extends BasePage {
 		this.driver = driver;
 	}
 
+
 	@FindBy(how = How.XPATH, using = "//*[@id=\"page-wrapper\"]/div[3]/div[1]/div/div/div/div[1]/h5")
 	WebElement ADD_CONTACT_HEADER_ELEMENT;
 	@FindBy(how = How.XPATH, using = "//*[@id=\"account\"]")
